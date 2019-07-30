@@ -17,10 +17,23 @@ export class ProductsComponent implements OnInit {
   }
 
   setClasses(isOdd) {
-    if (isOdd) {
-      return 'odd';
-    }
+    let cssClass = '  ';
 
+    if (isOdd) {
+      cssClass += ' odd ';
+    }
+    return cssClass;
+
+  }
+
+  setPriceClass( quantity) {
+
+    let cssClass = ' stock ';
+
+    if (quantity === 0) {
+      cssClass = ' stock-zero ';
+    }
+    return cssClass;
   }
 
 }

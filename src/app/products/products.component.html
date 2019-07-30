@@ -1,6 +1,11 @@
 <h1>Product List</h1>
-<ul>
-  <li *ngFor="let product of products;index as i; last as isLast; odd as isOdd" [ngClass]="setClasses(isOdd)">
+<div>
+  <div *ngFor="let product of products;index as i; last as isLast; odd as isOdd" [ngClass]="setClasses(isOdd)">
     {{product.name}}
-  </li>
-</ul>
+    <span [ngClass]="setPriceClass(product.quantity)">
+      {{product.currency}}{{product.price}}
+    </span>
+    <br/>
+  </div>
+
+</div>
