@@ -1,3 +1,6 @@
+<h1>Product List</h1>
 <ul>
-  <li *ngFor="let product of products"> <h3>{{product}}</h3></li>
+  <li *ngFor="let product of products;index as i; last as isLast; odd as isOdd" [ngClass]="setClasses(isOdd)">
+    {{product.name}}
+  </li>
 </ul>
